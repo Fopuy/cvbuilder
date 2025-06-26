@@ -80,7 +80,7 @@ export default function EducationInfoForm({data, onChange}){
                         Remove
                     </button>
                 </div>
-            ))};
+            ))}
 
             <button onClick={addEntry} className="education-add-button">
                 + Add Education
