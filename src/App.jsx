@@ -21,6 +21,15 @@ function App() {
     location:"",
   })
 
+  const [experienceInfo, setExperienceInfo]=useState({
+    companyName:"",
+    positionTitle:"",
+    startDate:"",
+    endDate:"",
+    location:"",
+    description:"",
+  })
+
   function handlePersonalDetailsChange(e){
     const { key } = e.target.dataset;
     setPersonalInfo({...personalInfo, [key] : e.target.value})
@@ -29,6 +38,11 @@ function App() {
   function handleEducationChange(e){
     const { key } = e.target.dataset;
     setEducationInfo({...educationInfo, [key] : e.target.value})
+  }
+
+  function handleExperienceChange(e){
+    const { key } = e.target.dataset;
+    setExperienceInfo({...experienceInfo, [key] : e.target.value})
   }
 
   console.log(educationInfo);
@@ -53,11 +67,35 @@ function App() {
           location ={educationInfo.location}
           onChange ={handleEducationChange}
           />
-          <ExperienceDetails />
+          <ExperienceDetails 
+          companyName={experienceInfo.companyName}
+          positionTitle={experienceInfo.positionTitle}
+          expStartDate={experienceInfo.startDate}
+          expEndDate={experienceInfo.endDate}
+          expLocation={experienceInfo.location}
+          description={experienceInfo.description}
+          onChange={handleExperienceChange}
+          />
         </div>
       </div>
         <Resume 
-        fullName={personalInfo.fullName}/>
+        fullName={personalInfo.fullName}
+        email={personalInfo.email}
+        phoneNumber={personalInfo.phoneNumber}
+        address={personalInfo.address}
+        startDate={educationInfo.startDate} 
+        endDate={educationInfo.endDate} 
+        location={educationInfo.location} 
+        schoolName={educationInfo.schoolName} 
+        degree={educationInfo.degree}
+        companyName={experienceInfo.companyName}
+        positionTitle={experienceInfo.positionTitle}
+        expStartDate={experienceInfo.startDate}
+        expEndDate={experienceInfo.endDate}
+        expLocation={experienceInfo.location}
+        description={experienceInfo.description}
+        />
+        
     </div>
   )
 }

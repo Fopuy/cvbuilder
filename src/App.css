@@ -35,7 +35,8 @@ form {
     rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
 }
 
-.resume{
+/*for resume not my code xd*/
+.resume {
   background-color: white;
   position: sticky;
   top: 0px;
@@ -43,4 +44,140 @@ form {
   display: grid;
   width: 100%;
   height: 100%;
+}
+
+.resume.top {
+  grid-template-rows: auto 1fr;
+}
+
+.resume.left {
+  grid-template-columns: 44% 56%;
+}
+
+.resume.right {
+  grid-template-columns: 56% 44%;
+}
+
+.resume.right > :first-child {
+  grid-column: 2 / 2;
+  grid-row: 1 / end;
+}
+.resume.right > :last-child {
+  grid-column: 1 / 1;
+  grid-row: 1 / end;
+}
+
+.resume-section {
+  padding: 0 56px;
+  margin-top: 40px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.resume h1,
+.resume h2,
+.resume h3 {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
+.header-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 13px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 4px 0;
+  background-color: var(--section-resume-bg);
+  color: var(--resume-accent);
+}
+
+/*personal-info-section-css*/
+.personal-info {
+  background-color: var(--resume-accent);
+  color: var(--header-resume-color);
+  width: 100%;
+  padding: 36px 24px;
+}
+
+.resume-name {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: auto;
+  width: fit-content;
+}
+
+.resume.top .contact-info {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/*education-info-css*/
+.education-info {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.education-info-group {
+  min-width: 150px;
+}
+
+.education-info-schoolName {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
+.education-info-degree {
+  font-size: 15px;
+}
+
+
+/*experience-info-css*/
+.experience-info {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.experience-info-group {
+  min-width: 150px;
+}
+
+.experience-info-companyName {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.experience-info-positionTitle {
+  font-size: 15.4px;
+}
+
+.experience-info-description {
+  margin-top: 4px;
+  white-space: pre-wrap;
+}
+
+/*personal details*/
+.personal-details {
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
 }
