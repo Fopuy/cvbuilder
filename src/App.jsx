@@ -1,76 +1,66 @@
 import { useState } from 'react'
 import './App.css'
-import PersonalInfoForm from './components/PersonalInfoForm'
-import EducationInfoForm from './components/EducationInfoForm'
-import ExperienceForm from './components/ExperienceInfoForm'
-import CVPreview from "./components/CVPreview";
+import PersonalDetails from './components/PersonalDetails';
+import EducationDetails from './components/EducationDetails';
+import ExperienceDetails from './components/ExperienceDetails';
+import Resume from './components/Resume';
 
 function App() {
-  const [personalInfo, setPersonalInfo]=useState({
-    fullName: "Joshua De Jesus",
-    email: "joshuadejesus12345@gmail.com",
-    phone: "+639054575529",
-    address: "San Mateo, Rizal",
-    linkedin: "https://linkedin.com/joshuadejesus12345",
-    github: "https://github.com/fopuy",
-  });
-
-  const [education, setEducation] = useState([
-    {
-      school: "Mapua University",
-      degree: "BS Electronics Engineer",
-      startDate: "July 2013",
-      endDate: "March 2020",
-      description: "",
-    },
-  ]);
+  const [personalInfo, setPersonalInfo] = useState({
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+  })
   
-  const [experience, setExperience] = useState([
-    {
-      company: "MEC Networks Corporation",
-      position: "Systems Engineer II",
-      startDate: "April 2022",
-      endDate: "September 2024",
-      description: "Pre-sales Engineer",
-    }
-  ])
+  const [educationInfo, setEducationInfo] = useState({
+    schoolName:"",
+    degree:"",
+    startDate:"",
+    endDate:"",
+    location:"",
+  })
+
+  function handlePersonalDetailsChange(e){
+    const { key } = e.target.dataset;
+    setPersonalInfo({...personalInfo, [key] : e.target.value})
+  }
+
+  function handleEducationChange(e){
+    const { key } = e.target.dataset;
+    setEducationInfo({...educationInfo, [key] : e.target.value})
+  }
+
+  console.log(educationInfo);
 
   return (
-    <div className = "app-container">
-      <div className = "form-panel">
-        <PersonalInfoForm
-          data={personalInfo}
-          onChange={(updatedInfo) => setPersonalInfo(updatedInfo)}
-        />
-
-        <EducationInfoForm
-          data={education}
-          onChange = {(updatedInfo) => setEducation(updatedInfo)}
-        />
-
-        <ExperienceForm
-          data = {experience}
-          onChange = {(updatedInfo) => setExperience(updatedInfo)}
-        />
+    <div className = "app">
+      <div className = "edit-side">
+        <div className = "sidebar"></div>
+        <div className = "form-container">
+          <PersonalDetails 
+          fullName={personalInfo.fullName}
+          email={personalInfo.email}
+          phoneNumber={personalInfo.phoneNumber}
+          address={personalInfo.address}
+          onChange={handlePersonalDetailsChange}
+          />
+          <EducationDetails 
+          schoolName={educationInfo.schoolName}
+          degree={educationInfo.degree}
+          startDate ={educationInfo.startDate}
+          endDate ={educationInfo.endDate}
+          location ={educationInfo.location}
+          onChange ={handleEducationChange}
+          />
+          <ExperienceDetails />
+        </div>
       </div>
-      <div className = "preview-panel">
-        <CVPreview
-          personalInfo={personalInfo}
-          education={education}
-          experience={experience}
-        />
-      </div>
-
-      {/* <h3>Live Personal Info</h3>
-      <pre>{JSON.stringify(personalInfo, null, 2)}</pre>
-
-      <h3>Live Education</h3>
-      <pre>{JSON.stringify(education, null, 2)}</pre>
-
-      <h3>Live Experience</h3>
-      <pre>{JSON.stringify(experience, null, 2)}</pre> */}
+        <Resume 
+        fullName={personalInfo.fullName}/>
     </div>
   )
 }
 
 export default App;
+
