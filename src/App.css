@@ -1,3 +1,52 @@
+/*index.css*/
+@font-face {
+  font-family: "NotoSans";
+  src: url(../fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "NotoSans-Bold";
+  src: url(../fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "NotoSans-SemiBold";
+  src: url(../fonts/NotoSans-SemiBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  --resume-accent: #0e374e;
+  --resume-font: "NotoSans", sans-serif;
+  --resume-bold: "NotoSans-Bold", sans-serif;
+  --header-resume-color: white;
+  --section-resume-bg: rgba(14, 55, 78, 0.07);
+  --main-bg-color: #f3f4f6;
+  font-family: "NotoSans", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+button {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 14px;
+  font-family: "NotoSans-bold";
+}
+
+/*App.css*/
 .app {
   display: flex;
   margin: auto;
@@ -28,6 +77,154 @@ form {
   flex-grow: 1;
 }
 
+/*EducationInfo.css*/
+.education-details{
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.education-info {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.education-info-group {
+  min-width: 150px;
+}
+
+.education-info-schoolName {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+}
+
+.education-info-degree {
+  font-size: 15px;
+}
+
+/*ExperienceInfo.css*/
+
+.experience-details{
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.experience-info {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.experience-info-group {
+  min-width: 150px;
+}
+
+.experience-info-companyName {
+  font-family: var(--resume-bold);
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.experience-info-positionTitle {
+  font-size: 15.4px;
+}
+
+.experience-info-description {
+  margin-top: 4px;
+  white-space: pre-wrap;
+}
+
+/*InputGroup.css*/
+.input-group input,
+.input-group textarea {
+  border: 2px solid transparent;
+  background-color: var(--main-bg-color);
+  padding: 10px;
+  border-radius: 12px;
+  transition: border 0.25s, box-shadow 0.25s;
+}
+
+.input-group textarea {
+  max-width: 100%;
+  min-height: 42px;
+  height: 65px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: rgb(59, 131, 246);
+  outline: none;
+  box-shadow: 0px 3px 15px rgba(59, 131, 246, 0.2);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.education-dates {
+  display: flex;
+  gap: 8px;
+}
+
+label > * {
+  font-family: "NotoSans-SemiBold";
+}
+
+.optional-text,
+.recommended-text {
+  margin-left: 8px;
+  color: rgb(156, 163, 175);
+  font-size: 10.5px;
+}
+
+/*PersonalDetails.css*/
+
+.personal-details {
+  padding: 18px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+/*PersonalInfoSection.css*/
+.personal-info {
+  background-color: var(--resume-accent);
+  color: var(--header-resume-color);
+  width: 100%;
+  padding: 36px 24px;
+}
+
+.resume-name {
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: auto;
+  width: fit-content;
+}
+
+.resume.top .contact-info {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-info > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/*Resume.css*/
 .resume-container {
   width: 21cm;
   height: 29.7cm;
@@ -35,7 +232,6 @@ form {
     rgba(0, 0, 0, 0.25) 0px 8px 16px -8px;
 }
 
-/*for resume not my code xd*/
 .resume {
   background-color: white;
   position: sticky;
@@ -83,10 +279,11 @@ button {
   font-weight: bold;
 }
 
-.header-text {
+.header-text {  
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 680px;
   margin-bottom: 13px;
   text-align: center;
   border-radius: 2px;
@@ -95,89 +292,98 @@ button {
   color: var(--resume-accent);
 }
 
-/*personal-info-section-css*/
-.personal-info {
-  background-color: var(--resume-accent);
-  color: var(--header-resume-color);
+.forms-container {
   width: 100%;
-  padding: 36px 24px;
 }
 
-.resume-name {
-  text-align: center;
-}
-
-.contact-info {
+.dates-group {
   display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin: auto;
-  width: fit-content;
-}
-
-.resume.top .contact-info {
-  flex-direction: row;
+  gap: 16px;
+  width: 100%;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.contact-info > div {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-/*education-info-css*/
-.education-info {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 24px;
-}
-
-.education-info-group {
-  min-width: 150px;
-}
-
-.education-info-schoolName {
-  font-family: var(--resume-bold);
-  font-weight: bold;
-}
-
-.education-info-degree {
-  font-size: 15px;
-}
-
-
-/*experience-info-css*/
-.experience-info {
-  display: flex;
-  gap: 18px;
-  margin-bottom: 24px;
-}
-
-.experience-info-group {
-  min-width: 150px;
-}
-
-.experience-info-companyName {
-  font-family: var(--resume-bold);
-  font-weight: bold;
-  margin-bottom: 2px;
-}
-
-.experience-info-positionTitle {
-  font-size: 15.4px;
-}
-
-.experience-info-description {
-  margin-top: 4px;
-  white-space: pre-wrap;
-}
-
-/*personal details*/
-.personal-details {
-  padding: 18px;
+/*Sidebar.css*/
+.sidebar {
+  padding: 14px 8px;
   background-color: white;
   border-radius: 12px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-grow: 1;
+}
+
+.sidebar button {
+  border: 0;
+  background-color: transparent;
+  padding: 12px 4px;
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+  flex-direction: column;
+  align-items: center;
+  font-family: "NotoSans-SemiBold";
+  transition: background-color 0.15s ease-in-out;
+}
+
+.sidebar button[data-selected="true"] {
+  background-color: whitesmoke;
+  color: #0e374e;
+}
+
+.sidebar button:active {
+  scale: 0.95;
+}
+
+/*columns*/
+.two-column-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 32px;
+}
+
+.left-col {
+  flex: 0 0 160px; /* fixed width for dates/locations */
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.right-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.school-name,
+.company-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #222;
+}
+
+.degree,
+.position-title {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.description {
+  color: #333;
+  line-height: 1.5;
+  white-space: pre-line; /* preserves line breaks */
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 0 4px;
+  flex-wrap: wrap;
 }

@@ -1,0 +1,286 @@
+.resume-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .resume-name {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .contact-info i {
+    color: #007bff;
+  }
+  
+  .resume-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+  }
+  
+  .education-info,
+  .experience-info {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .education-info-group,
+  .experience-info-group {
+    margin-bottom: 15px;
+  }
+  
+  .education-info-schoolName,
+  .experience-info-companyName {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+  
+  .education-info-degree,
+  .experience-info-positionTitle {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+  
+  .experience-info-description {
+    margin-top: 4px;
+    color: #444;
+    line-height: 1.5;
+    white-space: pre-line; /* lets you use multiline descriptions */
+  }
+  
+  .dates {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 4px;
+  }
+  
+  .personal-details {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .personal-details-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .personal-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .personal-details-form input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .personal-details-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  .experience-details {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .experience-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .experience-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .experience-form input,
+  .experience-form textarea {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .experience-form input:focus,
+  .experience-form textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  .dates-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dates-group input {
+    flex: 1;
+  }
+
+  .education-details {
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .education-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .education-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .education-form input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .education-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #f0f8ff;
+  }
+  
+  .dates-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .dates-group input {
+    flex: 1;
+  }
+
+  /* App.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .app {
+    display: flex;
+    min-height: 100vh;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .edit-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .sidebar {
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .resume {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input,
+  .input-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
