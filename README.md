@@ -1,5 +1,4 @@
-todolistyt.pages.dev
-live page is above
+this is the live page : https://todolistyt.pages.dev/
 
 # React + Vite
 
