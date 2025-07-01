@@ -1,4 +1,4 @@
-this is the live page : https://todolistyt.pages.dev/
+this is the live page : https://cvbuilder-83r.pages.dev/
 
 # React + Vite
 
